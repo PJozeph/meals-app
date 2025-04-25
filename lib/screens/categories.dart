@@ -1,4 +1,3 @@
-// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meals_app/data/dummy_data.dart';
 import 'package:meals_app/screens/meals.dart';
@@ -39,7 +38,6 @@ class CategoriesScreen extends StatelessWidget {
           crossAxisSpacing: 20,
         ),
         children: [
-          // use for loop for availableCategories
           ...availableCategories
               .map(
                 (category) => CategoryItem(
