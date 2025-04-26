@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/models/meal.dart';
+import 'package:meals_app/widgets/meail_item_train.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
@@ -50,7 +51,24 @@ class MealItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(width: 10),
-                    Row(),
+                    Row(
+                      children: [
+                        MeailItemTrain(
+                          icon: Icons.schedule,
+                          title: '${meal.duration} min',
+                        ),
+                        const SizedBox(width: 10),
+                        MeailItemTrain(
+                          icon: Icons.work,
+                          title: meal.complexity.name,
+                        ),
+                        const SizedBox(width: 10),
+                        MeailItemTrain(
+                          icon: Icons.attach_money,
+                          title: meal.affordability.name,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
