@@ -25,14 +25,16 @@ class _FilterScreenState extends State<FilterScreen> {
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.save))],
       ),
       body: PopScope(
-        canPop: true,
+        canPop: false,
         onPopInvokedWithResult: (bool didPop, dynamic result) {
           if (didPop) {
-            Navigator.of(context).pop({
-              FilterOptions.glutenFree: _gluteinFreeFilterSet,
-              FilterOptions.lactoseFree: _lactoseFreeFilterSet,
-            });
+            return; // CANCEL ANY USER-DRIVEN POP EVENT
           }
+          // PROGRAMMATIC POP EVENT WITH DATA
+          Navigator.of(context).pop({
+            FilterOptions.glutenFree: _gluteinFreeFilterSet,
+            FilterOptions.lactoseFree: _lactoseFreeFilterSet,
+          });
         },
         child: Column(
           children: [
