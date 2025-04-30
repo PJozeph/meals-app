@@ -19,6 +19,7 @@ class MealDetail extends StatelessWidget {
               'Ingredients',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 10),
@@ -46,6 +47,7 @@ class MealDetail extends StatelessWidget {
               'Steps',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 10),
