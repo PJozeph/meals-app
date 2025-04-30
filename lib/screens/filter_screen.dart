@@ -1,5 +1,3 @@
-import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
-
 import 'package:flutter/material.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -28,9 +26,8 @@ class _FilterScreenState extends State<FilterScreen> {
         canPop: false,
         onPopInvokedWithResult: (bool didPop, dynamic result) {
           if (didPop) {
-            return; // CANCEL ANY USER-DRIVEN POP EVENT
+            return;
           }
-          // PROGRAMMATIC POP EVENT WITH DATA
           Navigator.of(context).pop({
             FilterOptions.glutenFree: _gluteinFreeFilterSet,
             FilterOptions.lactoseFree: _lactoseFreeFilterSet,
