@@ -30,7 +30,6 @@ class MainDrawer extends StatelessWidget {
             title: Text('Meals'),
             onTap: () {
               onSelectScreen('meals');
-              Navigator.of(context).pop();
             },
           ),
           const Divider(),
@@ -39,7 +38,6 @@ class MainDrawer extends StatelessWidget {
             title: Text('Filters'),
             onTap: () {
               onSelectScreen('filters');
-              Navigator.of(context).pop();
             },
           ),
         ],
