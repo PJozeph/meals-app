@@ -18,14 +18,8 @@ class TabsScreen extends ConsumerStatefulWidget {
   }
 }
 
-const _kInitialFilterOptions = {
-  FilterOptions.glutenFree: false,
-  FilterOptions.lactoseFree: false,
-};
-
 class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
-  // Map<FilterOptions, bool> _selectedFilters = _kInitialFilterOptions;
 
   void _setScreen(String identifier) async {
     Navigator.of(context).pop(); // Close the drawer
